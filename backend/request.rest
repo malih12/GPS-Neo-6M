@@ -1,0 +1,56 @@
+#### Tambahkan Pengguna (POST)
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "adinda",
+    "email": "dinda@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+#### Dapatkan Semua Pengguna (GET)
+GET http://localhost:5000/users
+
+#### Dapatkan Pengguna dengan ID Tertentu (GET)
+GET http://localhost:5000/users/30b6f052-7a14-4a8b-86ad-6cd58ae7ad7e
+
+#### Perbarui Pengguna dengan ID Tertentu (PATCH)
+PATCH http://localhost:5000/users/30b6f052-7a14-4a8b-86ad-6cd58ae7ad7e
+Content-Type: application/json
+
+{
+    "name": "malih",
+    "email": "aldi@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "admin"
+}
+
+####Hapus Pengguna dengan ID Tertentu (DELETE)
+DELETE http://localhost:5000/users/a2cc8b22-b047-4590-a7e0-5511c744b342
+
+####Masuk (POST) - Pengguna 1
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "aldi@gmail.com",
+    "password": "123456"
+}
+
+#####Masuk (POST) - Pengguna 2
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "dinda@gmail.com",
+    "password": "123456"
+}
+
+### #Dapatkan Data Pengguna Saat Ini (GET)
+GET http://localhost:5000/me
+
+####Keluar (DELETE)
+DELETE http://localhost:5000/logout
