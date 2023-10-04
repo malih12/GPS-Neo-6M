@@ -31,7 +31,7 @@ Content-Type: application/json
 ####Hapus Pengguna dengan ID Tertentu (DELETE)
 DELETE http://localhost:5000/users/a2cc8b22-b047-4590-a7e0-5511c744b342
 
-####Masuk (POST) - Pengguna 1
+####Masuk (POST) - Pengguna admin
 POST http://localhost:5000/login
 Content-Type: application/json
 
@@ -40,7 +40,7 @@ Content-Type: application/json
     "password": "123456"
 }
 
-#####Masuk (POST) - Pengguna 2
+#####Masuk (POST) - Pengguna user
 POST http://localhost:5000/login
 Content-Type: application/json
 
@@ -54,3 +54,15 @@ GET http://localhost:5000/me
 
 ####Keluar (DELETE)
 DELETE http://localhost:5000/logout
+
+### Get all product
+GET http://localhost:5000/products
+
+### Post data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "product 1 ",
+    "price": "123456"
+}
